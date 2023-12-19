@@ -1,0 +1,23 @@
+openapi: 3.1.0
+
+info:
+  version: 2023.12
+  title: OpenAPI Example Document
+  description: OpenAPIを使用したドキュメントを作ってみました。
+
+servers:
+  - url: https://example.com
+    description: XX環境
+
+tags:
+  - name: ユーザ
+    description: ユーザ情報関連のAPI
+
+paths:
+  /users:
+    $ref: "./paths/users.yaml#/users"
+
+components:
+  schemas:
+    users:
+      $ref: "./components/schemas/users.yaml"
