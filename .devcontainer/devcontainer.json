@@ -1,0 +1,6 @@
+{
+    "name": "openapi-example",
+    "dockerComposeFile": "../compose.yaml",
+    "service": "redoc",
+    "workspaceFolder": "/usr/local/redoc"
+}

@@ -1,0 +1,11 @@
+volumes:
+  # vscodeの拡張機能キャッシュ用
+  vscode-extension-volume:
+
+services:
+  redoc:
+    build: .
+    volumes:
+      - .:/usr/local/redoc
+      - vscode-extension-volume:/root/.vscode-server/extensions
+    tty: true

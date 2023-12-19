@@ -1,0 +1,27 @@
+users:
+  get:
+    summary: ユーザ一覧取得
+    tags:
+      - ユーザ
+    parameters:
+      - name: limit
+        in: query
+        description: 1リクエストでどれくらい返却するか指定します。
+        required: true
+        schema:
+          type: integer
+          maximum: 100
+          format: int32
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: "../components/schemas/user.yaml#/users"
+      default:
+        description: Error
+        content:
+          application/json:
+            schema:
+              $ref: "../components/schemas/error.yaml#/error"
