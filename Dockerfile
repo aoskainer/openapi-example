@@ -1,4 +1,4 @@
-FROM node:20.11.1-bookworm
+FROM node:22.0.0-bookworm
 
 WORKDIR /usr/local/redoc
 
